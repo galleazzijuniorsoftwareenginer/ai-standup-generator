@@ -12,4 +12,10 @@ app.include_router(standup_router)
 
 @app.get("/")
 def root():
-    return {"message": "AI Standup Generator running"}
+  return {
+    "name": "AI Standup Generator API",
+    "description": "Generate developer daily standup reports from GitHub commits using AI.",
+    "documentation": "/docs",
+    "example_request": "/generate-standup?username=torvalds&repo=linux",
+    "status": "API running"
+}
