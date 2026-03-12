@@ -1,5 +1,14 @@
 ## AI Standup Generator
 
+## Live API
+
+https://ai-standup-generator-production.up.railway.app
+
+## API Docs
+
+https://ai-standup-generator-production.up.railway.app/docs
+
+
 **AI Standup Generator** is a GitHub repository created by **galleazzijuniorsoftwareenginer**. The project provides an automated tool that uses artificial intelligence to generate **daily standup reports**, a common practice in agile development teams.
 
 The application analyzes development activity in GitHub repositories, such as **commit messages**, and uses a language model to transform this information into structured progress updates.
