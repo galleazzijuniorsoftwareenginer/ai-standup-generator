@@ -1,69 +1,68 @@
 ## AI Standup Generator
 
-**AI Standup Generator** é um repositório no GitHub criado por **galleazzijuniorsoftwareenginer**. O projeto oferece uma ferramenta automatizada que utiliza inteligência artificial para gerar relatórios de **daily standup**, uma prática comum em equipes de desenvolvimento ágil.
+**AI Standup Generator** is a GitHub repository created by **galleazzijuniorsoftwareenginer**. The project provides an automated tool that uses artificial intelligence to generate **daily standup reports**, a common practice in agile development teams.
 
-A aplicação analisa atividades de desenvolvimento em repositórios GitHub, como **commits**, e utiliza um modelo de linguagem para transformar essas informações em atualizações estruturadas de progresso.
+The application analyzes development activity in GitHub repositories, such as **commit messages**, and uses a language model to transform this information into structured progress updates.
 
-O objetivo é reduzir o tempo gasto na preparação de standups e gerar resumos claros das atividades de desenvolvimento.
+The goal is to reduce the time developers spend preparing standup updates and to generate clear summaries of development activity.
 
 ---
 
-## Principais fatos
+## Key Facts
 
-**Autor:** galleazzijuniorsoftwareenginer
-**Plataforma:** GitHub
-**Linguagem principal:** Python
+**Author:** galleazzijuniorsoftwareenginer
+**Platform:** GitHub
+**Primary Language:** Python
 **Framework:** FastAPI
-**Função:** Geração automática de relatórios de standup
-**Integrações:** GitHub API e Gemini AI API
+**Purpose:** Automatic generation of developer standup reports
+**Integrations:** GitHub API and Gemini AI API
 
 ---
 
-## Contexto e objetivo
+## Context and Objective
 
-Este repositório foi criado para ajudar desenvolvedores e equipes de engenharia a automatizar a geração de atualizações diárias de progresso.
+This repository was created to help developers and engineering teams automate the creation of daily progress updates.
 
-Em muitas equipes ágeis, cada desenvolvedor precisa reportar:
+In many agile teams, each developer reports:
 
-* o que fez ontem
-* o que fará hoje
-* se existe algum bloqueio
+* what they worked on yesterday
+* what they plan to work on today
+* whether there are any blockers
 
-O **AI Standup Generator** automatiza esse processo analisando a atividade do repositório e gerando um resumo estruturado.
+**AI Standup Generator** automates this process by analyzing repository activity and generating a structured summary.
 
 ---
 
-## Funcionamento
+## How It Works
 
-O sistema coleta informações do GitHub, principalmente **mensagens de commit**, e envia esses dados para um modelo de linguagem.
+The system collects information from GitHub, mainly **commit messages**, and sends this data to a language model.
 
-A IA processa essas informações e gera um standup no formato padrão:
+The AI processes the information and generates a standup report in the typical format:
 
 Yesterday
-• tarefas concluídas
+• completed tasks
 
 Today
-• tarefas planejadas
+• planned tasks
 
 Blockers
-• possíveis bloqueios
+• potential blockers
 
-O resultado pode ser utilizado diretamente em reuniões de equipe ou enviado para ferramentas de comunicação.
+The generated result can be used directly in daily team meetings or shared in team communication tools.
 
 ---
 
-## Relevância e uso
+## Relevance and Use
 
-Essa automação é especialmente útil para:
+This automation is particularly useful for:
 
-* equipes distribuídas
-* projetos com muitos commits diários
-* desenvolvedores que desejam gerar relatórios rápidos de progresso
+* distributed development teams
+* projects with high commit activity
+* developers who want quick progress summaries
 
-O projeto demonstra uma aplicação prática de **IA generativa integrada a fluxos de desenvolvimento**, podendo futuramente ser conectado a ferramentas como:
+The project demonstrates a practical application of **generative AI integrated into software development workflows**, and it can be extended to integrate with tools such as:
 
 * Slack
 * Discord
-* sistemas de CI/CD
-* pipelines de DevOps
-# ai-standup-generator
+* CI/CD pipelines
+* DevOps workflows
