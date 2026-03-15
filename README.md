@@ -87,7 +87,66 @@ Gemini AI (generate standup summary)
 ↓
 Standup Report Response
 
-Future Implementations
+GET /generate-standup?username=torvalds&repo=linux
+
+
+Example Response
+
+
+{
+"standup": "Yesterday: ... Today: ... Blockers: ..."
+}
+
+
+---
+
+## Project Structure
+
+
+ai-standup-generator
+│
+├── app
+│ ├── api
+│ │ └── standup_routes.py
+│ └── services
+│
+├── static
+│ └── index.html
+│
+├── main.py
+├── requirements.txt
+└── README.md
+
+
+---
+
+## Run Locally
+
+Install dependencies
+
+
+pip install -r requirements.txt
+
+
+Run the server
+
+
+uvicorn main:app --reload
+
+
+Open the frontend
+
+
+http://localhost:8000/app
+
+
+Open API docs
+
+
+http://localhost:8000/docs
+
+
+## Future Implementations
 
 Planned improvements for future versions of the project:
 
