@@ -59,19 +59,70 @@ Blockers
 
 The generated result can be used directly in daily team meetings or shared in team communication tools.
 
----
+## Features
+
+- Generate **daily standup reports** from GitHub commit activity
+- AI-powered summaries using **Gemini AI**
+- REST API built with **FastAPI**
+- Interactive API documentation with **Swagger**
+- Public **live API deployment on Railway**
+- Health check endpoint for monitoring
+- Works with any **public GitHub repository**
+
+
+## Example API Request
+
+Generate a standup report from a GitHub repository:
+GET /generate-standup?username=torvalds&repo=linux
+
+##Architecture
+
+User Request
+↓
+FastAPI API
+↓
+GitHub API (collect commit messages)
+↓
+Gemini AI (generate standup summary)
+↓
+Standup Report Response
+
+Future Implementations
+
+Planned improvements for future versions of the project:
+
+Generate standup reports from all repositories of a GitHub user
+
+Filter standups by specific commit author
+
+Support weekly engineering reports
+
+Improve prompt engineering for more accurate standups
+
+Integration with Slack or Discord for automated standup posting
+
+Implement rate limiting to protect the API
+
+Add Redis caching to reduce repeated AI calls
+
+Support private GitHub repositories with authentication tokens
+
+
 
 ## Relevance and Use
 
 This automation is particularly useful for:
 
-* distributed development teams
-* projects with high commit activity
-* developers who want quick progress summaries
+- distributed development teams
+- projects with high commit activity
+- developers who want quick progress summaries
 
-The project demonstrates a practical application of **generative AI integrated into software development workflows**, and it can be extended to integrate with tools such as:
+The project demonstrates a practical application of **generative AI integrated into software development workflows**,
+ transforming raw development activity (GitHub commits) into structured communication for engineering teams.
 
-* Slack
-* Discord
-* CI/CD pipelines
-* DevOps workflows
+This approach can be extended to integrate with tools such as:
+
+- Slack
+- Discord
+- CI/CD pipelines
+- DevOps workflows
