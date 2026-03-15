@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>AI Standup Generator | GitHub AI Reports</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#f4f6fb;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:10px;
+width:420px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.result{
+margin-top:20px;
+}
+
+textarea{
+width:100%;
+height:150px;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+resize:none;
+}
+
+.copy{
+margin-top:10px;
+background:#16a34a;
+}
+
+.copy:hover{
+background:#15803d;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>AI Standup Generator</h1>
+
+<input id="username" placeholder="GitHub Username">
+
+<input id="repo" placeholder="Repository Name">
+
+<button onclick="generateStandup()">
+Generate Standup
+</button>
+
+<div class="result">
+
+<textarea id="output" placeholder="Standup will appear here..."></textarea>
+
+<button class="copy" onclick="copyStandup()">
+Copy to Clipboard
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+async function generateStandup(){
+
+const username = document.getElementById("username").value
+const repo = document.getElementById("repo").value
+
+if(!username || !repo){
+alert("Please fill all fields")
+return
+}
+
+const url = `/generate-standup?username=${username}&repo=${repo}`
+
+document.getElementById("output").value = "Generating standup..."
+
+try{
+
+const response = await fetch(url)
+const data = await response.json()
+
+document.getElementById("output").value = data.standup
+
+}catch(error){
+
+document.getElementById("output").value = "Generating standup with AI..."
+
+}
+
+}
+
+function copyStandup(){
+
+const textarea = document.getElementById("output")
+
+textarea.select()
+textarea.setSelectionRange(0,99999)
+
+navigator.clipboard.writeText(textarea.value)
+
+alert("Standup copied!")
+
+}
+
+</script>
+
+</body>
+</html>

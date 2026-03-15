@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from datetime import datetime
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 from app.api.standup_routes import router as standup_router
+
+
 app = FastAPI(
     title="AI Standup Generator",
     description="Generate standups using GitHub activity and AI",
@@ -32,3 +37,17 @@ def root():
         "status": "running",
         "timestamp": datetime.utcnow()
     }
+
+
+@app.get("/health")
+def health():
+    return {
+        "status": "ok"
+    }
+
+# Serve static frontend
+app.mount("/app/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/app")
+def serve_frontend():
+    return FileResponse("static/index.html")
