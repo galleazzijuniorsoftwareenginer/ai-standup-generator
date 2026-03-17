@@ -1,6 +1,10 @@
 ## AI Standup Generator
 
-## Live API
+
+## APP DEMO
+https://ai-standup-generator-production.up.railway.app/app
+
+## Live API Railway
 
 https://ai-standup-generator-production.up.railway.app
 
